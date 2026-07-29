@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KITSUNE FOX | Japanese UX Localization</title>
+    <meta name="description" content="Native-Japanese UX QA and conversion copy for international SaaS teams. Fixed scope, fully async, no meetings.">
+    <meta property="og:title" content="KITSUNE FOX | Japanese UX Localization">
+    <meta property="og:description" content="Native-Japanese UX QA and conversion copy for international SaaS teams. Fixed scope, fully async, no meetings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kitsunefox-code.github.io/kitsunefox-japan-ux/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://kitsunefox-code.github.io/kitsunefox-japan-ux/">
+    <style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --spacing: 0.25rem;
+    --default-font-family: var(--font-geist-sans);
+    --default-mono-font-family: var(--font-geist-mono);
+  }
+}
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  code,
+  kbd,
+  samp,
+  pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol,
+  ul,
+  menu {
+    list-style: none;
+  }
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    display: block;
+    vertical-align: middle;
+  }
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+  button,
+  input,
+  select,
+  optgroup,
+  textarea,
+  ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or
+    (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit,
+  ::-webkit-datetime-edit-year-field,
+  ::-webkit-datetime-edit-month-field,
+  ::-webkit-datetime-edit-day-field,
+  ::-webkit-datetime-edit-hour-field,
+  ::-webkit-datetime-edit-minute-field,
+  ::-webkit-datetime-edit-second-field,
+  ::-webkit-datetime-edit-millisecond-field,
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button,
+  input:where([type="button"], [type="reset"], [type="submit"]),
+  ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .visible {
+    visibility: visible;
+  }
+  .relative {
+    position: relative;
+  }
+  .start {
+    inset-inline-start: var(--spacing);
+  }
+  .table {
+    display: table;
+  }
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+:root {
+  --ink: #090a0c;
+  --paper: #f4f3ed;
+  --white: #ffffff;
+  --lime: #a6ff18;
+  --violet: #786bff;
+  --muted: #777d87;
+  --line: #d8d8d1;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+.site-header {
+  width: min(1460px, calc(100% - 48px));
+  margin: 0 auto;
+  min-height: 86px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--white);
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+}
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--ink);
+  letter-spacing: -0.08em;
+  font-size: 12px;
+  font-weight: 900;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 13px;
+  color: #c7cad0;
+}
+nav a:hover,
+.text-link:hover {
+  color: var(--lime);
+}
+.header-cta {
+  justify-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  transition: 160ms ease;
+}
+.header-cta:hover {
+  background: var(--white);
+  color: var(--ink);
+}
+.hero {
+  min-height: 780px;
+  padding: 150px max(24px, calc((100vw - 1460px) / 2)) 80px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+  overflow: hidden;
+  background: radial-gradient(circle at 95% 16%, rgba(120, 107, 255, 0.5), transparent 25%),
+    radial-gradient(circle at 62% 90%, rgba(166, 255, 24, 0.16), transparent 22%),
+    var(--ink);
+  color: var(--white);
+}
+.eyebrow {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 720;
+  letter-spacing: 0.13em;
+  color: var(--violet);
+}
+.hero .eyebrow {
+  color: var(--lime);
+}
+.hero .eyebrow span {
+  color: #7d838d;
+  margin-left: 8px;
+}
+.hero h1 {
+  margin: 26px 0;
+  font-size: clamp(54px, 6vw, 96px);
+  line-height: 0.94;
+  letter-spacing: -0.07em;
+  font-weight: 680;
+}
+.hero h1 em {
+  color: var(--lime);
+  font-style: normal;
+}
+.hero-lede {
+  max-width: 650px;
+  color: #b7bbc2;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+}
+.button {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 22px;
+  border-radius: 4px;
+  font-weight: 720;
+  font-size: 14px;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.button-primary {
+  background: var(--lime);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 var(--violet);
+}
+.button-primary:hover {
+  box-shadow: 9px 9px 0 var(--violet);
+}
+.text-link {
+  color: #d2d5d9;
+  font-size: 14px;
+}
+.audit-card {
+  background: #f7f7f3;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 18px 18px 0 var(--violet);
+  transform: rotate(1.2deg);
+  max-width: 620px;
+  justify-self: end;
+}
+.audit-topline,
+.audit-path {
+  font-family: var(--font-geist-mono), monospace;
+}
+.audit-topline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 760;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.live-dot {
+  color: #447400;
+}
+.live-dot::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6ab800;
+  margin-right: 7px;
+}
+.audit-path {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 17px 0;
+}
+.finding {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-left: 4px solid #e0a000;
+  padding: 17px;
+  margin: 10px 0;
+  background: var(--white);
+}
+.finding-high {
+  border-left-color: #d53345;
+}
+.finding-number {
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--violet);
+  font-weight: 750;
+}
+.finding strong {
+  font-size: 14px;
+}
+.finding p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 6px 0 0;
+}
+.severity {
+  font-family: var(--font-geist-mono), monospace;
+  background: #d53345;
+  color: white;
+  padding: 4px 7px;
+  border-radius: 999px;
+  font-size: 9px;
+}
+.severity.medium {
+  background: #bd7300;
+}
+.rewrite {
+  margin-top: 18px;
+  background: var(--ink);
+  color: white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 9px 12px;
+  align-items: center;
+}
+.rewrite p {
+  grid-column: 1 / -1;
+  color: var(--lime);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.rewrite span {
+  color: #7f8590;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.rewrite del,
+.rewrite strong {
+  font-size: 15px;
+}
+.rewrite strong {
+  color: var(--lime);
+}
+.proof-strip {
+  background: var(--lime);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 30px;
+  padding: 21px max(24px, calc((100vw - 1460px) / 2));
+  align-items: center;
+}
+.proof-strip p {
+  margin: 0;
+  font-weight: 760;
+}
+.proof-strip div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.section {
+  padding: 120px max(24px, calc((100vw - 1380px) / 2));
+}
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px 80px;
+  align-items: end;
+  margin-bottom: 64px;
+}
+.section-heading .eyebrow {
+  grid-column: 1 / -1;
+  margin-bottom: -8px;
+}
+.section-heading h2,
+.recurring h2,
+.copy-kit h2,
+.final-cta h2 {
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.section-heading > p:last-child,
+.recurring-intro > p:last-child,
+.kit-copy > p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 620px;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+}
+.offer-card {
+  min-height: 530px;
+  padding: 34px;
+  background: #fafaf7;
+  border-right: 1px solid var(--line);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.offer-card:last-child {
+  border-right: 0;
+}
+.offer-card.featured {
+  background: var(--ink);
+  color: var(--white);
+  transform: translateY(-18px);
+  box-shadow: 0 18px 0 var(--violet);
+  border-right: 0;
+}
+.offer-index {
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--violet);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 720;
+}
+.featured .offer-index {
+  color: var(--lime);
+}
+.popular {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 12px;
+  background: var(--lime);
+  color: var(--ink);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  font-weight: 780;
+}
+.offer-card h3 {
+  font-size: 27px;
+  letter-spacing: -0.04em;
+  margin: 44px 0 14px;
+}
+.price {
+  font-size: 39px;
+  letter-spacing: -0.04em;
+  font-weight: 760;
+}
+.offer-summary {
+  color: var(--muted);
+  min-height: 54px;
+  line-height: 1.5;
+}
+.featured .offer-summary {
+  color: #aeb3bb;
+}
+.offer-card ul,
+.kit-copy ul,
+.retainer-meta ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 36px;
+}
+.offer-card li,
+.kit-copy li,
+.retainer-meta li {
+  padding: 11px 0 11px 18px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  font-size: 13px;
+}
+.offer-card li::before,
+.kit-copy li::before,
+.retainer-meta li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+}
+.featured li {
+  border-color: #34363c;
+}
+.offer-card > a {
+  margin-top: auto;
+  font-weight: 730;
+  font-size: 13px;
+  color: var(--violet);
+}
+.featured > a {
+  color: var(--lime);
+}
+.recurring {
+  background: var(--violet);
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 80px;
+}
+.recurring .eyebrow {
+  color: var(--lime);
+}
+.recurring-intro > p:last-child {
+  color: #e1deff;
+  margin-top: 34px;
+}
+.retainer-stack {
+  display: grid;
+  gap: 18px;
+}
+.retainer-card {
+  background: var(--white);
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+}
+.retainer-card.agency {
+  background: var(--lime);
+}
+.retainer-card h3 {
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  margin-top: 38px;
+}
+.retainer-card > div > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.retainer-meta strong {
+  font-size: 33px;
+  letter-spacing: -0.04em;
+}
+.retainer-meta strong span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.retainer-meta ul {
+  margin: 18px 0 24px;
+}
+.retainer-meta li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.button-dark {
+  background: var(--ink);
+  color: var(--white);
+}
+.copy-kit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+  background: #efeee8;
+}
+.kit-visual {
+  min-height: 560px;
+  background: linear-gradient(135deg, transparent 74%, var(--violet) 74%),
+    var(--ink);
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 60px;
+}
+.kit-tab {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: var(--lime);
+  padding: 9px 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  font-weight: 780;
+}
+.kit-sheet {
+  width: min(420px, 100%);
+  background: var(--white);
+  padding: 28px;
+  box-shadow: 14px 14px 0 var(--lime);
+  transform: rotate(-2deg);
+}
+.kit-sheet > p {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--ink);
+}
+.kit-sheet div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.kit-sheet span {
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--violet);
+  font-size: 10px;
+}
+.kit-sheet strong {
+  font-size: 16px;
+}
+.kit-copy {
+  max-width: 580px;
+}
+.kit-price {
+  color: var(--ink) !important;
+  font-size: 32px !important;
+  font-weight: 760;
+  margin: 24px 0 16px;
+}
+.kit-price span {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.kit-copy small {
+  display: block;
+  margin-top: 18px;
+  color: var(--muted);
+}
+.compact {
+  display: block;
+}
+.compact .eyebrow {
+  margin-bottom: 22px;
+}
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+}
+.steps li {
+  padding: 32px 28px 0 0;
+  border-right: 1px solid var(--line);
+  min-height: 210px;
+}
+.steps li + li {
+  padding-left: 28px;
+}
+.steps li:last-child {
+  border-right: 0;
+}
+.steps span {
+  display: block;
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--violet);
+  font-size: 12px;
+  margin-bottom: 36px;
+}
+.steps strong {
+  font-size: 19px;
+}
+.steps p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+.final-cta {
+  background: radial-gradient(circle at 85% 30%, rgba(120, 107, 255, 0.55), transparent 25%),
+    var(--ink);
+  color: var(--white);
+  text-align: center;
+  padding: 110px 24px;
+}
+.final-cta .eyebrow {
+  color: var(--lime);
+}
+.final-cta h2 {
+  margin: 28px auto 42px;
+}
+.final-cta .button {
+  margin: 0 auto;
+}
+.final-cta > p:last-child {
+  margin-top: 32px;
+  color: #858b94;
+  font-size: 12px;
+}
+footer {
+  background: var(--ink);
+  color: #7e848d;
+  border-top: 1px solid #292b31;
+  padding: 30px max(24px, calc((100vw - 1460px) / 2));
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 30px;
+  font-size: 11px;
+}
+footer .brand {
+  color: var(--white);
+}
+footer p {
+  margin: 0;
+}
+footer p:last-child {
+  text-align: right;
+}
+@media (max-width: 1000px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+  }
+  nav {
+    display: none;
+  }
+  .hero,
+  .recurring,
+  .copy-kit {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding-top: 150px;
+  }
+  .audit-card {
+    justify-self: stretch;
+    max-width: none;
+  }
+  .proof-strip,
+  .section-heading {
+    grid-template-columns: 1fr;
+  }
+  .proof-strip div {
+    flex-wrap: wrap;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-card {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    min-height: auto;
+  }
+  .offer-card.featured {
+    transform: none;
+    box-shadow: none;
+  }
+  .retainer-card {
+    grid-template-columns: 1fr;
+  }
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .steps li:nth-child(2) {
+    border-right: 0;
+  }
+}
+@media (max-width: 640px) {
+  .site-header {
+    width: calc(100% - 30px);
+  }
+  .brand {
+    font-size: 12px;
+  }
+  .header-cta {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+    min-height: auto;
+  }
+  .hero h1 {
+    font-size: 52px;
+  }
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .audit-card {
+    padding: 15px;
+    box-shadow: 9px 9px 0 var(--violet);
+  }
+  .finding {
+    grid-template-columns: 28px 1fr;
+  }
+  .severity {
+    display: none;
+  }
+  .section {
+    padding-top: 78px;
+    padding-bottom: 78px;
+  }
+  .section-heading h2,
+  .recurring h2,
+  .copy-kit h2,
+  .final-cta h2 {
+    font-size: 43px;
+  }
+  .recurring {
+    gap: 46px;
+  }
+  .retainer-card {
+    padding: 24px;
+  }
+  .kit-visual {
+    min-height: 440px;
+    padding: 30px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .steps li,
+  .steps li + li {
+    min-height: auto;
+    padding: 24px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .steps span {
+    margin-bottom: 20px;
+  }
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer p:last-child {
+    text-align: left;
+  }
+}
+</style>
+  </head>
+  <body><main><header class="site-header"><a class="brand" href="#top" aria-label="KITSUNE FOX home"><span class="brand-mark">KF</span><span>KITSUNE FOX</span></a><nav aria-label="Primary navigation"><a href="#services">Services</a><a href="#recurring">Monthly QA</a><a href="#copy-kit">Copy Kit</a></nav><a class="header-cta" href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Request scope</a></header><section class="hero" id="top"><div class="hero-copy"><p class="eyebrow">JAPAN-READY <span>WITHOUT THE MEETING</span></p><h1>Make your Japanese<br/>conversion path<br/><em>feel finished.</em></h1><p class="hero-lede">Native-Japanese UX QA and conversion copy for SaaS landing, pricing, signup, and onboarding flows. Fixed scope. Email delivery. No camera required.</p><div class="hero-actions"><a class="button button-primary" href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Get an async scope <span aria-hidden="true">↗</span></a><a class="text-link" href="#services">See fixed-scope offers <span aria-hidden="true">↓</span></a></div></div><aside class="audit-card" aria-label="Example Japanese UX findings"><div class="audit-topline"><span>PUBLIC-PAGE QA</span><span class="live-dot">READY</span></div><p class="audit-path">/ja-JP/pricing</p><div class="finding finding-high"><span class="finding-number">01</span><div><strong>Buying path switches to English</strong><p>Pricing, billing terms, and FAQ break the localized journey.</p></div><span class="severity">HIGH</span></div><div class="finding"><span class="finding-number">02</span><div><strong>Literal headline translation</strong><p>Understandable copy that does not sound product-native.</p></div><span class="severity medium">MED</span></div><div class="rewrite"><p>READY-TO-SHIP REWRITE</p><span>Before</span><del>AIの瞬きで</del><span>After</span><strong>AIでもっと速く</strong></div></aside></section><section class="proof-strip" aria-label="Service qualities"><p>Built for international teams</p><div><span>FULLY ASYNC</span><span>5-10 DAY DELIVERY</span><span>ONE REVISION INCLUDED</span><span>PUBLIC URLS ACCEPTED</span></div></section><section class="section services" id="services"><div class="section-heading"><p class="eyebrow">FIXED-SCOPE SERVICES</p><h2>Start small. Ship the whole path.</h2><p>Every engagement has a defined output, delivery window, and price. Internal analytics are useful, but never required.</p></div><div class="offer-grid"><article class="offer-card"><p class="offer-index">01 / DIAGNOSE</p><h3>Japan UX Snapshot</h3><p class="price">US$390</p><p class="offer-summary">A prioritized review of the Japanese experience you already have.</p><ul><li>Up to 20 public screens</li><li>Issue priority and rationale</li><li>Recommended Japanese copy</li><li>Five-business-day delivery</li></ul><a href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Request this scope ↗</a></article><article class="offer-card featured"><p class="offer-index">02 / CONVERT</p><div class="popular">CORE OFFER</div><h3>Conversion Rewrite</h3><p class="price">US$1,500</p><p class="offer-summary">Natural Japanese copy across the path where users decide and buy.</p><ul><li>Landing and pricing rewrite</li><li>Signup and conversion flow</li><li>Terminology glossary</li><li>Seven-business-day delivery</li></ul><a href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Request this scope ↗</a></article><article class="offer-card"><p class="offer-index">03 / LAUNCH</p><h3>Japan Launch Copy Pack</h3><p class="price">US$2,400</p><p class="offer-summary">A complete Japanese launch system beyond the landing page.</p><ul><li>Full conversion path</li><li>FAQ and five lifecycle emails</li><li>Store or listing copy</li><li>Japanese tone guide</li></ul><a href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Request this scope ↗</a></article></div></section><section class="section recurring" id="recurring"><div class="recurring-intro"><p class="eyebrow">NEW RECURRING REVENUE LANE</p><h2>Localization is not a launch.<br/>It is a release process.</h2><p>Japanese pages drift when source copy changes. Keep visible regressions, mixed-language UI, and billing ambiguity out of every release.</p></div><div class="retainer-stack"><article class="retainer-card"><div><p class="offer-index">FOR PRODUCT TEAMS</p><h3>Japan UX Watch</h3><p>Monthly public-page monitoring, copy regression checks, and ready-to-ship fixes.</p></div><div class="retainer-meta"><strong>US$500<span>/month</span></strong><ul><li>Up to 30 monitored URLs</li><li>Up to 20 replacement strings</li><li>Monthly prioritized report</li><li>Cancel any month</li></ul><a class="button button-dark" href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Start by email ↗</a></div></article><article class="retainer-card agency"><div><p class="offer-index">FOR AGENCIES</p><h3>White-label Japan Desk</h3><p>A quiet Japanese UX and copy partner for international client work and overflow releases.</p></div><div class="retainer-meta"><strong>US$900<span>/month</span></strong><ul><li>Two client paths per month</li><li>Five-day response target</li><li>Agency-ready editable delivery</li><li>No client-facing meeting</li></ul><a class="button button-dark" href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Ask about capacity ↗</a></div></article></div></section><section class="section copy-kit" id="copy-kit"><div class="kit-visual" aria-hidden="true"><span class="kit-tab">160 STRINGS</span><div class="kit-sheet"><p>JAPAN SAAS COPY KIT</p><div><span>CTA</span><strong>無料で始める</strong></div><div><span>BILLING</span><strong>年額一括払い</strong></div><div><span>SIGNUP</span><strong>アカウントを作成</strong></div><div><span>TRUST</span><strong>導入企業を見る</strong></div></div></div><div class="kit-copy"><p class="eyebrow">LOW-COST DIGITAL PRODUCT</p><h2>Japan SaaS Copy Kit</h2><p class="kit-price">US$59 <span>one time</span></p><p>A practical English-to-Japanese reference for common SaaS moments: CTAs, plans, billing, signup, consent, empty states, trust signals, and support.</p><ul><li>160 reviewed copy patterns</li><li>Spreadsheet and PDF delivery</li><li>Literal-translation warnings</li><li>Launch QA checklist</li></ul><a class="button button-primary" href="mailto:kitsunefox0505@gmail.com?subject=Japan%20SaaS%20Copy%20Kit%20early%20access">Join early access <span aria-hidden="true">↗</span></a><small>Payment is requested only after the delivery date is confirmed.</small></div></section><section class="section process"><div class="section-heading compact"><p class="eyebrow">NO-CALL WORKFLOW</p><h2>Four emails from scope to shipment.</h2></div><ol class="steps"><li><span>01</span><strong>Send URLs</strong><p>Share public pages, staging links, or a source-copy file.</p></li><li><span>02</span><strong>Confirm scope</strong><p>Receive the exact page list, price, and delivery date by email.</p></li><li><span>03</span><strong>Review delivery</strong><p>Get prioritized findings and editable Japanese replacement copy.</p></li><li><span>04</span><strong>Use one revision</strong><p>Send consolidated notes and receive the final version asynchronously.</p></li></ol></section><section class="final-cta"><p class="eyebrow">ONE URL IS ENOUGH TO START</p><h2>Show us the Japanese page<br/>that does not feel finished.</h2><a class="button button-primary" href="mailto:kitsunefox0505@gmail.com?subject=Async%20Japanese%20UX%20scope&amp;body=Company%3A%0AURLs%20to%20review%3A%0ATarget%20launch%20date%3A">Email KITSUNE FOX <span aria-hidden="true">↗</span></a><p>kitsunefox0505@gmail.com · Fully async · Japan Standard Time</p></section><footer><a class="brand" href="#top"><span class="brand-mark">KF</span><span>KITSUNE FOX</span></a><p>Japanese UX localization for international product teams.</p><p>© 2026 KITSUNE FOX</p></footer></main></body>
+</html>
